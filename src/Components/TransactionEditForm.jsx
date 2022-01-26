@@ -93,7 +93,7 @@ function TransactionEditForm() {
         <input type="submit" />
       </form>
       <div className="buttons">
-        <Link to={`${URL}/transactions/${index}`}>
+        <Link to={`/transactions/${index}`}>
           <button>Nevermind!</button>
         </Link>
       </div>

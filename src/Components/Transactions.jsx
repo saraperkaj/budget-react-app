@@ -22,11 +22,13 @@ function Transactions() {
 
   const transList = transactions.map((transaction, index) => {
     return (
-      <li key={index} index={index} className="transaction">
-        <p>{transaction.date}</p>
-        <a href={`/transactions/${index}`}>{transaction.itemName}</a>
-        <p> ${transaction.amount}</p>
-      </li>
+      <div>
+        <li key={index} index={index} className="transaction">
+          <p>{transaction.date}</p>
+          <a href={`/transactions/${index}`}>{transaction.itemName}</a>
+          <p> ${transaction.amount}</p>
+        </li>
+      </div>
     );
   });
 
