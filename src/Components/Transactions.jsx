@@ -9,8 +9,8 @@ function Transactions() {
     axios
       .get(`${URL}/transactions`)
       .then((response) => {
-        console.log(response);
-        console.log(response.data);
+        // console.log(response);
+        // console.log(response.data);
         setTrans(response.data);
       })
       .catch((event) => console.log("catch", event));
@@ -24,9 +24,7 @@ function Transactions() {
     return (
       <li key={index} index={index} className="transaction">
         <p>{transaction.date}</p>
-        <a href={`/transactions/${index}`}>
-          Transaction: {transaction.itemName}
-        </a>
+        <a href={`/transactions/${index}`}>{transaction.itemName}</a>
         <p> ${transaction.amount}</p>
       </li>
     );
